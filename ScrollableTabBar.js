@@ -28,6 +28,7 @@ const ScrollableTabBar = React.createClass({
     textStyle: Text.propTypes.style,
     renderTab: React.PropTypes.func,
     underlineStyle: View.propTypes.style,
+    onScroll:React.PropTypes.func,
   },
 
   getDefaultProps() {
@@ -166,11 +167,13 @@ const ScrollableTabBar = React.createClass({
       onLayout={this.onContainerLayout}
     >
       <ScrollView
+        automaticallyAdjustContentInsets={false}
         ref={(scrollView) => { this._scrollView = scrollView; }}
         horizontal={true}
         showsHorizontalScrollIndicator={false}
         showsVerticalScrollIndicator={false}
         directionalLockEnabled={true}
+        onScroll={this.props.onScroll}
         bounces={false}
         scrollsToTop={false}
       >

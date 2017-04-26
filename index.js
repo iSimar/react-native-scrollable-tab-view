@@ -69,6 +69,7 @@ const ScrollableTabView = React.createClass({
       if (this.scrollView && Platform.OS === 'android') {
         const x = this.props.initialPage * this.state.containerWidth;
         this.scrollView.scrollTo({ x, animated: false });
+
         if(this.props.onCompleteAndroidScrollTo){
           setTimeout(this.props.onCompleteAndroidScrollTo, 100);
         }
