@@ -9,18 +9,6 @@ const {
 const Button = require('./Button');
 
 const DefaultTabBar = React.createClass({
-  propTypes: {
-    goToPage: React.PropTypes.func,
-    activeTab: React.PropTypes.number,
-    tabs: React.PropTypes.array,
-    backgroundColor: React.PropTypes.string,
-    activeTextColor: React.PropTypes.string,
-    inactiveTextColor: React.PropTypes.string,
-    textStyle: Text.propTypes.style,
-    tabStyle: View.propTypes.style,
-    renderTab: React.PropTypes.func,
-    underlineStyle: View.propTypes.style,
-  },
 
   getDefaultProps() {
     return {
