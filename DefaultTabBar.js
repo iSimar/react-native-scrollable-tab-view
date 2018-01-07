@@ -8,7 +8,7 @@ const {
 } = ReactNative;
 const Button = require('./Button');
 
-const DefaultTabBar = React.createClass({
+class DefaultTabBar extends React.Component {
 
   getDefaultProps() {
     return {
@@ -16,10 +16,10 @@ const DefaultTabBar = React.createClass({
       inactiveTextColor: 'black',
       backgroundColor: null,
     };
-  },
+  }
 
   renderTabOption(name, page) {
-  },
+  }
 
   renderTab(name, page, isTabActive, onPressHandler) {
     const { activeTextColor, inactiveTextColor, textStyle, } = this.props;
@@ -40,7 +40,7 @@ const DefaultTabBar = React.createClass({
         </Text>
       </View>
     </Button>;
-  },
+  }
 
   render() {
     const containerWidth = this.props.containerWidth;
@@ -66,8 +66,8 @@ const DefaultTabBar = React.createClass({
         <Animated.View style={[tabUnderlineStyle, { left, }, this.props.underlineStyle, ]} />
       </View>
     );
-  },
-});
+  }
+}
 
 const styles = StyleSheet.create({
   tab: {
